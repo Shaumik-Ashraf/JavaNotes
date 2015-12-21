@@ -41,7 +41,16 @@ public class BubbleSort {
     // Rearranges elements of input ArrayList
     // postcondition: data's elements sorted in ascending order
     public static void bubbleSortV( ArrayList<Comparable> data ) {
-
+	
+	for(int i=0; i<data.size()-1; i++) {  //repeat pass data.size() times
+		for(int j=data.size(); j>1; j--) {  //one pass
+			if( data.get(j).compareTo(data.get(j-1)) < 0 ) {   //check for swap
+				data.add( data.remove(j), j-1 );
+			}
+			
+		}
+	}
+	
     }//end bubbleSortV -- O(?)
 
 
