@@ -12,5 +12,5 @@ This is one pass of bubble sort algorithm
 "Lighter values "bubble" up to top
 
 ###Notes on bubble sort
-- n+1 passes sorts n passes
+- n+1 passes sorts n elements
 - ...
