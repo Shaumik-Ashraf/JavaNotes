@@ -45,7 +45,7 @@ public class BubbleSort {
 	for(int i=0; i<data.size()-1; i++) {  //repeat pass data.size() times
 		for(int j=data.size(); j>1; j--) {  //one pass
 			if( data.get(j).compareTo(data.get(j-1)) < 0 ) {   //check for swap
-				data.add( data.remove(j), j-1 );
+				data.add( j-1, data.remove(j) );
 			}
 			
 		}
