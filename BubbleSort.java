@@ -59,7 +59,15 @@ public class BubbleSort {
     //                Returns sorted copy of input ArrayList.
     public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input ) {
     	
-    	return( new ArrayList<Comparable>() ); //to pass compile 
+    	ArrayList<Comparable> sorted = new ArrayList( input.size() );
+    	
+    	for(int i=0; i<input.size(); i++) {  //copy input to sorted
+    		sorted.add( input.get(i) ); 
+    	}
+    	
+    	bubbleSortV( sorted );  //use void bubblesort on sorted to sort
+    	
+    	return( sorted );
     	
     }//end bubbleSort -- O(?)
 
