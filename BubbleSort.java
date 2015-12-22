@@ -43,7 +43,7 @@ public class BubbleSort {
     public static void bubbleSortV( ArrayList<Comparable> data ) {
 	
 	for(int i=0; i<data.size()-1; i++) {  //repeat pass data.size() times
-		for(int j=data.size(); j>1; j--) {  //one pass
+		for(int j=data.size()-1; j>0; j--) {  //one pass
 			if( data.get(j).compareTo(data.get(j-1)) < 0 ) {   //check for swap
 				data.add( j-1, data.remove(j) );
 			}
@@ -74,7 +74,6 @@ public class BubbleSort {
 
     public static void main(String [] args){
 
-	/*===============for VOID methods=============
 	ArrayList glen = new ArrayList<Integer>();
 	glen.add(7);
 	glen.add(1);
@@ -89,9 +88,9 @@ public class BubbleSort {
 	System.out.println( "ArrayList coco before sorting:\n" + coco );
 	bubbleSortV(coco);
 	System.out.println( "ArrayList coco after sorting:\n" + coco );
-	  ============================================*/
+      
 
-	/*==========for AL-returning methods==========
+	
     	ArrayList glen = new ArrayList<Integer>();
 	glen.add(7);
 	glen.add(1);
@@ -111,7 +110,7 @@ public class BubbleSort {
 			    + cocoSorted );
 	System.out.println( "ArrayList coco after sorting:\n" + coco );
 	System.out.println( coco );
-	  ============================================*/
+	 
 
     }//end main
 
