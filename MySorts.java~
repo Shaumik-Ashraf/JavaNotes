@@ -36,18 +36,7 @@ public class MySorts {
     }
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
-    public static void BogoSort( ArrayList al ) {
-	
-	while( !al.isSorted() ) shuffle(al);
-	
-    }    
-	
-    public static boolean isSorted( ArrayList al ) {
-	
-	//...
-	
-    }
-
-}
+    
+    
     
     
