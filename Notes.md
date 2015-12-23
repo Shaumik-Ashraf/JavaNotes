@@ -14,3 +14,10 @@ This is one pass of bubble sort algorithm
 ###Notes on bubble sort
 - n+1 passes sorts n elements
 - ...
+
+##12/23/15
+
+######Aim: Reflect, look ahead
+######DN: Review
+
+"Let's all concede that BogoSort is the best. Stop kidding yourself."
