@@ -76,7 +76,7 @@ public class InsertionSort {
 	
 	rA.add(0, input.remove(0));
 	for(int i=0; i<len; i++) {
-		for(int j=i; j=>0; j--) {
+		for(int j=i; j>=0; j--) {
 			if( input.get(0).compareTo( rA.get(j) ) > 0 ) {
 				rA.add( j, input.remove(0) );
 				break;
@@ -100,14 +100,14 @@ public class InsertionSort {
 	  glen.add(12);
 	  glen.add(3);
 	  System.out.println( "ArrayList glen before sorting:\n" + glen );
-	  selectionSortV(glen);
+	  insertionSortV(glen);
 	  System.out.println( "ArrayList glen after sorting:\n" + glen );
 	
 	  ArrayList coco = populate( 10, 1, 1000 );
 	  System.out.println( "ArrayList coco before sorting:\n" + coco );
-	  selectionSortV(coco);
+	  insertionSortV(coco);
 	  System.out.println( "ArrayList coco after sorting:\n" + coco );
-
+/*
 	  ArrayList glen = new ArrayList<Integer>();
 	  glen.add(7);
 	  glen.add(1);
@@ -115,19 +115,19 @@ public class InsertionSort {
 	  glen.add(12);
 	  glen.add(3);
 	  System.out.println( "ArrayList glen before sorting:\n" + glen );
-	  ArrayList glenSorted = selectionSort( glen );
+	  ArrayList glenSorted = insertionSort( glen );
 	  System.out.println( "sorted version of ArrayList glen:\n" 
 	  + glenSorted );
 	  System.out.println( "ArrayList glen after sorting:\n" + glen );
 
 	  ArrayList coco = populate( 10, 1, 1000 );
 	  System.out.println( "ArrayList coco before sorting:\n" + coco );
-	  ArrayList cocoSorted = selectionSort( coco );
+	  ArrayList cocoSorted = insertionSort( coco );
 	  System.out.println( "sorted version of ArrayList coco:\n" 
 	  + cocoSorted );
 	  System.out.println( "ArrayList coco after sorting:\n" + coco );
 	  System.out.println( coco );
-
+*/
 
     }//end main
 
