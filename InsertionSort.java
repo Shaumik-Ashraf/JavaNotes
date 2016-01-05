@@ -87,6 +87,8 @@ public class InsertionSort {
 		}
 	}
 
+	return rA;
+
     }//end selectionSort -- O(?)
 
 
