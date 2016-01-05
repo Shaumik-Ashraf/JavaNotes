@@ -1,3 +1,8 @@
+/* Shaumik Ashraf
+ *
+ *
+ */
+
 /*====================================
   class Matrix -- models a square matrix
 
@@ -16,13 +21,13 @@ public class Matrix {
 
     //default constructor intializes a DEFAULT_SIZE*DEFAULT_SIZE matrix
     public Matrix( ) {
-
+	matrix = new Object[DEFAULT_SIZE][DEFAULT_SIZE];
     }
 
 
     //constructor intializes an a*a matrix
     public Matrix( int a ) {
-
+	matrix = new Object[a][a];
     }
 
 
