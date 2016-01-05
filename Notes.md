@@ -33,11 +33,17 @@ After pass 2: [3,5,7,12,8]
 After pass 3: [3,5,7,12,8]
 After pass 4: [3,5,7,8,12]
 
-This is known as sorted sort
+This is known as insertion sort
 - Think of dataset as 2 parts, sorted & unsorted
 - At outset, sorted region contains 1 sorted item
 - With each pass, "walk" an item from unsorted region to proper index in sorted region
 - Repeat until no items are unsorted
 - after n passes, sorted region contains n+1 elements
 
+##1/5/16
+
+######Aim: Enter the matrix
+#####DN: Trace selection and insertion sort
+
+[3,2,5,0,1]
 
