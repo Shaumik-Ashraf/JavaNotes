@@ -43,7 +43,18 @@ This is known as insertion sort
 ##1/5/16
 
 ######Aim: Enter the matrix
-#####DN: Trace selection and insertion sort
+######DN: Trace selection and insertion sort
 
 [3,2,5,0,1]
 
+... (Check Notebook)
+
+Matrices:
+
+	Java class Matrix represents a square matrix (n rows x n columns)
+		Accessors
+			int size() -> dimensions
+			int get(int r, int c) -> Matrix[r][c]
+			...
+		Overwrite
+			String toString()
