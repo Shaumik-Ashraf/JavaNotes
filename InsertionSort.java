@@ -1,3 +1,20 @@
+/* Shaumik Ashraf
+ * APCS1 pd9
+ * HW#53 - Poker Face
+ * 2015-01-05
+ */
+ 
+/* Q1: Is more work done toward beginning or end of insertion sort? Why?
+ * A: More work is done torward the end because the sorted region increases causing more comparisons
+ * Q2: For n items, how many passes are necessary to sort?
+ * A: n-1 passes are necessary to sort n items
+ * Q3: What is known after pass p, and how do you know it?
+ * A: After p passes, the first p+1 elements are sorted; this is because the sorted region starts at 1, and gains 1 element per pass
+ * Q4: What is the runtime classification of this sort?
+ * A: O=n^2
+ */
+
+
 /*======================================
   class InsertionSort -- implements InsertionSort algorithm
   ======================================*/
@@ -41,12 +58,12 @@ public class InsertionSort {
 	for(int i=1; i<data.size(); i++) {  //passes
 	    for(int j=i; j>0; j--) {            //compare target to sorted region right to left
 		if( data.get(i).compareTo(data.get(j-1)) > 0 ) {  //if target less than sorted region target
-		    data.set(i, data.remove(i-1));                //swap
+		    data.add(i, data.remove(i-1));                //swap
 		}
 	    }
 	}
 
-    }//end selectionSort -- O()  CONTINUE HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    }//end selectionSort -- O() = n^2
 
 
     // ArrayList-returning selectionSort
@@ -54,7 +71,21 @@ public class InsertionSort {
     //                Returns sorted copy of input ArrayList.
     public static ArrayList<Comparable> insertionSort( ArrayList<Comparable> input ) {
 
-
+	ArrayList<Comparable> rA = new ArrayList<Comparable>( input.size() );
+	int len = input.size();
+	
+	rA.add(0, input.remove(0));
+	for(int i=0; i<len; i++) {
+		for(int j=i; j=>0; j--) {
+			if( input.get(0).compareTo( rA.get(j) ) > 0 ) {
+				rA.add( j, input.remove(0) );
+				break;
+			}
+			if( j==0 ) {
+				rA.add(0, input.remove(i));
+			}
+		}
+	}
 
     }//end selectionSort -- O(?)
 
@@ -62,7 +93,7 @@ public class InsertionSort {
     //main method for testing
     public static void main( String [] args ) {
 
-	/*============================================
+	
 	  ArrayList glen = new ArrayList<Integer>();
 	  glen.add(7);
 	  glen.add(1);
@@ -72,7 +103,7 @@ public class InsertionSort {
 	  System.out.println( "ArrayList glen before sorting:\n" + glen );
 	  selectionSortV(glen);
 	  System.out.println( "ArrayList glen after sorting:\n" + glen );
-	  ============================================*/
+	
 	
 	/*===============for VOID methods=============
 	  ArrayList coco = populate( 10, 1, 1000 );
