@@ -50,7 +50,7 @@ public class Matrix {
     //I'm assuming this means matrix is empty at index r,c
     //also, changed to public
     public boolean isEmpty( int r, int c ) {
-	return( matrix[r][c]==null )
+	return( matrix[r][c]==null );
     }
 
 
