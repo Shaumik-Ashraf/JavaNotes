@@ -91,7 +91,7 @@ public class Matrix {
     	
     	if( matrix==rightSide ) return( true );  //equal pointers/aliasing
 	else if( !(rightSide instanceof Matrix) ) return(false);
-	else if( matrix.length != rightSide.size ) return(false);
+	else if( matrix.length != (Matrix)rightSide.size() ) return(false);
 	else {
 		for(int i=0; i<matrix.length; i++) {   //cudve used for-each loops
 			for(int j=0; j<matrix.length; j++) {
@@ -171,10 +171,10 @@ public class Matrix {
 	
 	System.out.println("Testing set & get & equals method-------------------------------------");
 	System.out.println("getting 1,1 of A: "  + A.get(1,1));
-	System.out.println("setting 1,1 of A to 'C': "  + A.set(1,1,new Char('C'));
+	System.out.println("setting 1,1 of A to 'C': "  + A.set(1,1,new Char('C')));
 	System.out.println("getting 1,1 of A: "  + A.get(1,1));
 	System.out.println("getting 1,2 of B: "  + B.get(1,2));
-	System.out.println("setting 1,2 of B to 'C': "  + B.set(1,2,new Char('C'));
+	System.out.println("setting 1,2 of B to 'C': "  + B.set(1,2,new Char('C')));
 	System.out.println("getting 1,2 of B: "  + B.get(1,2));
 	System.out.println("Does A equal B? " + A.equals(B));
 	
@@ -184,7 +184,7 @@ public class Matrix {
 	B.swapRows(1,3);
 	System.out.println("Matrix B:\n" + B);
 	System.out.println("Swapping cols 2,3");
-	B.swapColumns(2,3)
+	B.swapColumns(2,3);
 	System.out.println("Matrix B:\n" + B);
 	
 	System.out.println("Done---------------------------------------------------------------------");
