@@ -23,27 +23,29 @@ public class Matrix {
     //default constructor intializes a DEFAULT_SIZE*DEFAULT_SIZE matrix
     public Matrix( ) {
 	matrix = new Object[DEFAULT_SIZE][DEFAULT_SIZE];
-    }
+    } //O(1)
 
 
     //constructor intializes an a*a matrix
     public Matrix( int a ) {
 	matrix = new Object[a][a];
-    }
+    } //O(1)
 
 
     //return size of this matrix, where size is 1 dimension
     //changed to public
     public int size() {
 	return( matrix.length );
-    }
+    } //O(1)
+
 
 
     //return the item at the specified row & column   
     //changed to public
     public Object get( int r, int c ) {
 	return( matrix[r][c] );
-    }
+    } //O(1)
+
 
 
     //return true if this matrix is empty, false otherwise
@@ -51,7 +53,8 @@ public class Matrix {
     //also, changed to public
     public boolean isEmpty( int r, int c ) {
 	return( matrix[r][c]==null );
-    }
+    } //O(1)
+
 
 
     //overwrite item at specified row and column with newVal
@@ -61,7 +64,8 @@ public class Matrix {
 	
 	matrix[r][c] = newVal;
 	return(temp);
-    }
+    } //O(1)
+
 
 
     //return String representation of this matrix
@@ -81,12 +85,13 @@ public class Matrix {
 	}
 	
 	return(s);
-    }
+    } //O(n^2)
+
 
 
     //override inherited equals method
     //criteria for equality: matrices have identical dimensions,
-    // and identical values in each slot
+    //and identical values in each slot
     public boolean equals( Object rightSide ) {
     	
     	if( matrix==rightSide ) return( true );  //equal pointers/aliasing
@@ -103,7 +108,8 @@ public class Matrix {
 		return(true);  //function never exited, everything must be equal
 	}
 	
-    }
+    } //O(n^2)
+
 
 
     //swap two columns of this matrix 

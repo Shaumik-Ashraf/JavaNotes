@@ -58,3 +58,12 @@ Matrices:
 			...
 		Overwrite
 			String toString()
+
+##1/6/16
+
+######Aim: How do you flip a matrix
+######DN: Which is simpler, swapping rows or columns?
+
+"MTA works on the way to school?
+	Glitch in The Matrix"
+
