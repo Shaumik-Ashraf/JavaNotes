@@ -91,11 +91,11 @@ public class Matrix {
     	
     	if( matrix==rightSide ) return( true );  //equal pointers/aliasing
 	else if( !(rightSide instanceof Matrix) ) return(false);
-	else if( matrix.length != (Matrix)rightSide.size() ) return(false);
+	else if( matrix.length != ((Matrix)rightSide).size() ) return(false);
 	else {
 		for(int i=0; i<matrix.length; i++) {   //cudve used for-each loops
 			for(int j=0; j<matrix.length; j++) {
-				if( matrix[i][j]!=rightSide.get(i,j) ) {
+				if( matrix[i][j]!=((Matrix)rightSide).get(i,j) ) {
 					return(false);  //this breaks loops and exits function
 				}
 			}
@@ -155,12 +155,12 @@ public class Matrix {
 	
 	System.out.println("Testing set & toString method---------------------------");
 	for(int i=0; i<A.size(); i++) {
-		for(int j=0; j<A.size; j++) {
+		for(int j=0; j<A.size(); j++) {
 			A.set(i, j, new Integer( (int)(Math.random()*100) ) );
 		}
 	}
 	for(int i=0; i<B.size(); i++) {
-		for(int j=0; j<B.size; j++) {
+		for(int j=0; j<B.size(); j++) {
 			B.set(i, j, new Integer( (int)(Math.random()*100) ) );
 		}
 	}
@@ -171,10 +171,10 @@ public class Matrix {
 	
 	System.out.println("Testing set & get & equals method-------------------------------------");
 	System.out.println("getting 1,1 of A: "  + A.get(1,1));
-	System.out.println("setting 1,1 of A to 'C': "  + A.set(1,1,new Char('C')));
+	System.out.println("setting 1,1 of A to 'C': "  + A.set(1,1,new String("C")));
 	System.out.println("getting 1,1 of A: "  + A.get(1,1));
 	System.out.println("getting 1,2 of B: "  + B.get(1,2));
-	System.out.println("setting 1,2 of B to 'C': "  + B.set(1,2,new Char('C')));
+	System.out.println("setting 1,2 of B to 'C': "  + B.set(1,2,new String("S")));
 	System.out.println("getting 1,2 of B: "  + B.get(1,2));
 	System.out.println("Does A equal B? " + A.equals(B));
 	
