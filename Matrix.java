@@ -293,7 +293,7 @@ public class Matrix {
     	System.out.println("Does B have 42: " + B.contains(new Integer(42)));
     	System.out.println("Does B have 3: " + B.contains(new Integer(3)));
     	
-    	System.out.println("Done----------------------------------------------------------------------";
+    	System.out.println("Done----------------------------------------------------------------------");
     }
 
 }//end class Matrix
