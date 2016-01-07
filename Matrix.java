@@ -201,13 +201,25 @@ public class Matrix {
     	Object[][] temp;
     	for(int i=0; i<matrix.length; i++) {
     		for(int j=0; j<matrix.length; j++) {
-    			//!@#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4
+    			temp[i][j] = matrix[j][i];
+    		}
+    	}
+    	for(int i=0; i<matrix.length; i++) {   //cud i hav done: matrix=temp; ??
+    		for(int j=0; j<matrix.length; j++) {
+    			matrix[i][j]=temp[i][j];
     		}
     	}
     }
 
     public boolean contains( Object o ) {
-    	
+    	for(int i=0; i<matrix.length; i++) {
+    		for(int j=0; j<matrix.length; j++) {
+    			if( o.equals(matrix[i][j]) ) {
+    				return(true);
+    			}
+    		}
+    	}
+    	return(false);
     }
 
     //main method for testing
@@ -217,7 +229,7 @@ public class Matrix {
 	Matrix B = new Matrix(3);
 	
 	System.out.println("Testing Matrix class");
-	System.out.println("Testing size method---------------------------");
+	System.out.println("Testing size method------------------------------------");
 	System.out.println("Expected 2; Size of A: " + A.size());
 	System.out.println("Expected 3; Size of B: " + B.size());
 	
@@ -257,6 +269,31 @@ public class Matrix {
 	
 	System.out.println("Part II---------------------------------------------------------------------");
     	
+    	System.out.println("Testing isFull method-------------------------------------------------------");
+    	System.out.println("isFull(A): " + A.isFull());
+    	System.out.println("isFull(B): " + B.isFull());
+    	System.out.println("isFull(new Matrix): " + (new Matrix(4)).isFull());
+    	
+    	System.out.println("Testing getRow, setRow, getCol, & setCol method--------------------------------");
+    	Object[] Vec = new Object[B.size()];
+    	for(int i=0; i<Vec.length; i++) Vec[i] = new Integer(i);
+    	System.out.println("Matrix B: " + B);
+    	System.out.println("getting B row 2: " + B.getRow(2));
+    	System.out.println("getting B col 2: " + B.getCol(2));
+    	System.out.println("setting B row 3: " + B.setRow(3, Vec));
+    	System.out.println("setting B col 1: " + B.setCol(1, Vec));
+    	
+    	System.out.println("Testing Transpose method-------------------------------------------------");
+    	System.out.println("A: " + A);
+    	System.out.println("T(A): " + A.transpose());
+    	
+    	System.out.println("Testing contains method-------------------------------------------------");
+    	System.out.println("B: " + B);
+    	System.out.println("Does B have 2: " + B.contains(new Integer(2)));
+    	System.out.println("Does B have 42: " + B.contains(new Integer(42)));
+    	System.out.println("Does B have 3: " + B.contains(new Integer(3)));
+    	
+    	System.out.println("Done----------------------------------------------------------------------";
     }
 
 }//end class Matrix
