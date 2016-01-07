@@ -198,7 +198,7 @@ public class Matrix {
     }
 
     public void transpose() {
-    	Object[][] temp;
+    	Object[][] temp = new Object[matrix.length][matrix.length];
     	for(int i=0; i<matrix.length; i++) {
     		for(int j=0; j<matrix.length; j++) {
     			temp[i][j] = matrix[j][i];
@@ -280,12 +280,12 @@ public class Matrix {
     	System.out.println("Matrix B: " + B);
     	System.out.println("getting B row 2: " + B.getRow(2));
     	System.out.println("getting B col 2: " + B.getCol(2));
-    	System.out.println("setting B row 3: " + B.setRow(3, Vec));
+    	System.out.println("setting B row 1: " + B.setRow(1, Vec));
     	System.out.println("setting B col 1: " + B.setCol(1, Vec));
     	
     	System.out.println("Testing Transpose method-------------------------------------------------");
     	System.out.println("A: " + A);
-	A.tranpose();
+	A.transpose();
     	System.out.println("T(A): " + A);
     	
     	System.out.println("Testing contains method-------------------------------------------------");
