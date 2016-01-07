@@ -108,7 +108,7 @@ public class Matrix {
 		return(true);  //function never exited, everything must be equal
 	}
 	
-    } //O(n^2)
+    } //O(n^2) (potentially)
 
 
 
@@ -127,7 +127,7 @@ public class Matrix {
 		matrix[i][c1] = matrix[i][c2];
 		matrix[i][c2] = temp;
 	}
-    }
+    } //O(n)
 
 
     //swap two rows of this matrix 
@@ -145,7 +145,7 @@ public class Matrix {
 		matrix[r1][i] = matrix[r2][i];
 		matrix[r2][i] = temp[i];
 	}
-    }
+    } //O(n)
 
 
     //main method for testing
@@ -193,7 +193,7 @@ public class Matrix {
 	B.swapColumns(2,3);
 	System.out.println("Matrix B:\n" + B);
 	
-	System.out.println("Done---------------------------------------------------------------------");
+	System.out.println("Part II---------------------------------------------------------------------");
     	
     }
 
