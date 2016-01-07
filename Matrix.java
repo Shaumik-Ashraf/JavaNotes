@@ -285,7 +285,8 @@ public class Matrix {
     	
     	System.out.println("Testing Transpose method-------------------------------------------------");
     	System.out.println("A: " + A);
-    	System.out.println("T(A): " + A.transpose());
+	A.tranpose();
+    	System.out.println("T(A): " + A);
     	
     	System.out.println("Testing contains method-------------------------------------------------");
     	System.out.println("B: " + B);
