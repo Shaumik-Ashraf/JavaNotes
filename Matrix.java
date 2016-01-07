@@ -147,6 +147,68 @@ public class Matrix {
 	}
     } //O(n)
 
+    /*======================================================================================================
+    =========================================Phase II=======================================================
+    =======================================================================================================*/
+
+    //returns true if NO object in matrix is null, else false
+    public boolean isFull() {
+    	for(int i=0; i<matrix.length; i++) {
+    		for(int j=0; j<matrix.length; j++) {
+    			if( isEmpty(i,j) ) {
+    				return(false);
+    			}
+    		}
+    	}
+    	return(true);
+    }
+
+    public Object[] getRow( int r ) {
+    	Object[] R = new Object[matrix.length];
+    	
+    	R = matrix[r];
+    	return(R);
+    }
+
+    public Object[] setRow( int r, Object[] newRow ) {
+    	Object[] R = new Object[matrix.length];
+    	
+    	R = matrix[r];
+    	matrix[r] = newRow;
+    	return(R);
+    }
+
+    public Object[] getCol( int c ) {
+    	Object[] C = new Object[matrix.length];
+    	
+    	for(int i=0; i<matrix.length; i++) {
+    		C[i] = matrix[i][c];
+    	}
+    	return(C);
+    }
+
+    public Object[] setCol( int c, Object[] newCol ) {
+    	Object[] C = new Object[matrix.length];
+    	
+    	for(int i=0; i<matrix.length; i++) {
+    		C[i] = matrix[i][c];
+    		matrix[i][c] = newCol[i];
+    	}
+    	return(C);
+    }
+
+    public void transpose() {
+    	Object[][] temp;
+    	for(int i=0; i<matrix.length; i++) {
+    		for(int j=0; j<matrix.length; j++) {
+    			//!@#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4
+    		}
+    	}
+    }
+
+    public boolean contains( Object o ) {
+    	
+    }
 
     //main method for testing
     public static void main( String[] args ) {
