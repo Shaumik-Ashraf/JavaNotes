@@ -67,3 +67,14 @@ Matrices:
 "MTA works on the way to school?
 	Glitch in The Matrix"
 
+##2/24/16
+
+######Aim: 
+######DN: NQueens Problem
+
+Traveling Salesman Problem (TSP)
+
+State space - set of values which a process can take
+ - state space is implicit, often too large to handle in entirety
+ - 2 stats are connected if an operation can transform one into the other
+
