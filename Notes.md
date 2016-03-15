@@ -1,3 +1,6 @@
+Content-type:text/markdown
+
+
 #JavaNotes
 
 ##12/21/15
