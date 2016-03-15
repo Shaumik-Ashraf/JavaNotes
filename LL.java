@@ -137,8 +137,8 @@ class LLNode {
 		next = n_arg;
     }
 
-    public void setString(String s_arg) { s = s_arg };
-    public void setNext(Node n_arg) { next = n_arg };
+    public void setString(String s_arg) { s = s_arg; }
+    public void setNext(Node n_arg) { next = n_arg; }
 
     public String getString() { return(s); }
     public Node getNext() { return(next); }
