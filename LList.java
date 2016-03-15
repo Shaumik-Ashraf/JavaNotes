@@ -15,23 +15,25 @@ public class LList {
 			add(s);
 		}
 	}
-	
+
 	//override toString method, for debugging
 	//i shouldve used size and get instead of redefining -_-
 	public String toString() {
 		String ret = new String("[");
+		String s;
 		LLNode nav = head;
-		
-		while( nav.getNext().getNext()!=null ) {
-			ret += (nav.getString() + ", ");
+
+		while( nav.getNext()!=null ) {
+			s = nav.getString();
 			nav = nav.getNext();
+			ret += (s + ", ");
 		}
-		
-		ret += (nav.getNext().getString() + "]\n");
-		
+
+		ret += (nav.getString() + "]\n");
+
 		return(ret);
 	}
-	
+
 	//helper function that returns last node of linkedlist head
 	private LLNode iterate() {
 		LLNode nav = head;
@@ -39,26 +41,26 @@ public class LList {
 		while( nav.getNext()!=null ) {
 			nav = nav.getNext();
 		}
-		
+
 		return( nav );
 	}
-	
+
 	//helper function that returns i-th node of linkedlist head
 	private LLNode iterate(int i) {
 		LLNode nav = head;
 		int c=0;
 
-		while( nav.getNext()!=null || c<i ) {
+		while( nav.getNext()!=null && c<i ) {
 			nav = nav.getNext();
 			c++;
 		}
-		
+
 		return( nav );
 	}
-	
+
     public void add(String s) {
 		LLNode node = iterate();
-		
+
 		if( node==head && head.getString()==null ) {
 			head.setString(s);
 		}
@@ -69,7 +71,7 @@ public class LList {
 
     public void add(int i, String s) {
 		LLNode node = iterate(i);
-		
+
 		if( node==head && head.getString()==null ) {
 			head.setString(s);
 		}
@@ -86,35 +88,35 @@ public class LList {
     public int size() {
 		LLNode nav = head;
 		int i;
-		
+
 		i=0;
 		while( nav.getNext()!=null ) {
 			nav = nav.getNext();
 			i++;
 		}
-		
-		return( i );
+
+		return( i+1 );
     }
 
 	/*================================================
 	=========TESTING==================================
 	================================================*/
 	public static void main(String[] args) {
-		
+
 		LList listy = new LList();
-		
+
 		listy.add("Hello");
 		listy.add("this");
 		listy.add("is");
-		listy.add("a");
+		listy.add("aey");
 		listy.add("list");
-		
-		System.out.println( "A LinkedList\nsize:" + listy.size() + "List:" + listy );
+
+		System.out.println( "A LinkedList::\nsize:" + listy.size() + "\nList:" + listy );
 		System.out.println( listy.get(5) + " " + listy.get(1) + " " + listy.get(2) );
-		
+
 	}
-	
-	
+
+
 }
 
 class LLNode {
@@ -132,15 +134,15 @@ class LLNode {
 		next = null;
     }
 
-    public LLNode(String s_arg, Node n_arg) {
+    public LLNode(String s_arg, LLNode n_arg) {
 		s = s_arg;
 		next = n_arg;
     }
 
     public void setString(String s_arg) { s = s_arg; }
-    public void setNext(Node n_arg) { next = n_arg; }
+    public void setNext(LLNode n_arg) { next = n_arg; }
 
     public String getString() { return(s); }
-    public Node getNext() { return(next); }
+    public LLNode getNext() { return(next); }
 
 }
