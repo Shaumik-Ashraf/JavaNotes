@@ -81,3 +81,14 @@ State space - set of values which a process can take
  - state space is implicit, often too large to handle in entirety
  - 2 stats are connected if an operation can transform one into the other
 
+##3/23/16
+
+######Aim:
+######DN:
+
+Our linked-list (so far):
+ - interface Iterable
+ - interface List
+ - public class LList implements List
+ - private class DLLNode (nested/wrapped in LList)
+
