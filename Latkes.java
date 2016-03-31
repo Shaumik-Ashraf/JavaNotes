@@ -1,5 +1,12 @@
+/*
+Shaumik Ashraf
+
+
+
+*/
+
 /*****************************************************
- * skeleton for class Latkes
+ * Stack
  * Implements a stack of Strings using an array as underlying container.
  *****************************************************/
 
@@ -15,17 +22,24 @@ public class Latkes {
     public Latkes( int size ) 
     { 
 	if( size<1 ) {
-	    throw new Exception( "Stack BS" );
+	    //throw new Exception( "Stack BS" );
+		size = 10;
 	}
 	_stack = new String[size];
 	_stackSize = 0;
     }
 
     //means of insertion
-    public void push( String s ) 
+    public void push( String s )
     { 
-	if( _stackSize > _stack.length ) {
-	    throw new Exception( "StackOverFlowError" );
+	if( _stackSize+1 > _stack.length ) {
+	    //throw new Exception( "StackOverFlowError" );
+		String[] temp = new String[ _stack.length * 2 ];
+		for(int i=0; i<_stack.length; i++) {
+			temp[i] = _stack[i];
+		}
+		_stack = temp;
+		//System.gc();
 	}
 	_stack[_stackSize] = s;
 	_stackSize++;
@@ -34,6 +48,9 @@ public class Latkes {
     //means of removal
     public String pop( ) 
     { 
+	if( isEmpty() ) {
+		return null;
+	}
 	_stackSize--;
 	return( _stack[_stackSize] );
     }
@@ -54,7 +71,7 @@ public class Latkes {
     //main method for testing
     public static void main( String[] args ) {
 	
-	/*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
+	
 	Latkes tastyStack = new Latkes(10);
 
 	tastyStack.push("aoo");
@@ -97,6 +114,8 @@ public class Latkes {
 
 	//stack empty by now; SOP(null)
 	System.out.println( tastyStack.pop() );
+	
+	/*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
 	  ^~~~~~~~~~~~~~~~AWESOME~~~~~~~~~~~~~~~^*/
 
     }//end main()
