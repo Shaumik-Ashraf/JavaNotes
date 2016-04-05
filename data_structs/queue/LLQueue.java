@@ -1,3 +1,9 @@
+/* Shaumik Ashraf
+ * APCS2 pd9
+ * HW25 - Brits Do Not Wait In Line
+ * 2016-04-05
+ */
+
 /*****************************************************
  * class LLQueue
  * uses a linked list to implement a QUEUE
