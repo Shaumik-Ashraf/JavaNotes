@@ -1,3 +1,9 @@
+/* Shaumik Ashraf
+ * APCS2 pd9
+ * HW25 - Brits Do Not Wait In Line
+ * 2016-04-05
+ */
+
 /*****************************************************
  * class LLQueue
  * uses a linked list to implement a QUEUE
@@ -19,16 +25,22 @@ public class LLQueue<T> implements Queue<T> {
     // default constructor creates an empty queue
     public LLQueue()
     { 
-	_front = null;
-	_end = _front;
+		_front = null;
+		_end = _front;
     }
 
     // means of adding a thing to the collection
     public void enqueue( T enQVal ) 
     {
-	LLNode<T> temp = new LLNode(enQVal, null);
-	_end.setNext(temp);
-	_end = temp;
+		LLNode<T> temp = new LLNode(enQVal, null);
+		if( isEmpty() ) {
+			_front = temp;
+			_end = temp;
+		}
+		else {
+			_end.setNext(temp);
+			_end = temp;
+		}
     }//O(1)
 
 

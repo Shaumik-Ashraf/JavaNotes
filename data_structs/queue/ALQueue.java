@@ -1,3 +1,9 @@
+/* Shaumik Ashraf
+ * APCS2 pd9
+ * HW26 - Nor Do Aussies
+ * 2016-04-05
+ */
+
 /*****************************************************
  * class ALQueue
  * uses an ArrayList to implement abstract data type QUEUE
@@ -19,47 +25,53 @@ public class ALQueue<T> implements Queue<T> {
     // default constructor
     public ALQueue() 
 	{ 
-
+		_queue = new ArrayList();
 	}
 
     // means of adding an item to collection 
     public void enqueue( T x )
     {
-
-    }//O(?)
+		_queue.add(x);
+    }//O(1)
 
 
     // means of removing an item from collection 
     public T dequeue()
     {
-
-    }//O(?)
+		return( _queue.remove(0) );
+    }//O(n)
 
 
     // means of "peeking" at the front item
     public T peekFront() 
     {
-
-    }//O(?)
+		return( _queue.get(0) );
+    }//O(1)
 
 
     // means of checking to see if collection is empty
     public boolean isEmpty()
     {
-
-    }//O(?)
+		return( _queue.size()==0 );
+    }//O(1)
 
 
     public String toString() 
     {
-
+		String ret = "[";
+		for( T i : _queue ) {
+			ret += (i.toString() + ", ");
+		}
+		ret = ret.substring(0, ret.length()-2);
+		ret += "]";
+		return( ret );
     }
 
 
     //main method for testing
     public static void main( String[] args ) {
 
-	/*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
+	
 	Queue<String> ALBSure = new ALQueue<String>();
 
 	System.out.println("\nnow enqueuing thrice..."); 
@@ -77,6 +89,7 @@ public class ALQueue<T> implements Queue<T> {
 
 	System.out.println("\nDequeuing from empty queue should yield error..."); 
 	System.out.println( ALBSure.dequeue() );
+	/*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
 	  ^~~~~~~~~~~~~~~~AWESOME~~~~~~~~~~~~~~~^*/
 
     }//end main
