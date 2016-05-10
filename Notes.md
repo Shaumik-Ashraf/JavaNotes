@@ -97,4 +97,35 @@ Our linked-list (so far):
 ######Aim:
 ######DN:
 
+##4/19/16
 
+######Aim:Implement Quicksort
+######DN: Q: How choose Pivot? Q: Quicksort requires O(?) time, O(?) space?
+
+Choosing Pivot
+ - list[ len-1 ]
+ - list[ rand() ]
+ - list[ 0 ]
+ - list[ len/2 ]
+
+Time-Space complexity Analysis
+ - O(n^2) worst case runtime
+ - O(1) space consumption
+ - Best case? Average case?
+
+##5/5/16
+
+######Aim: Trees 
+######DN: What do you know about trees
+
+Recall: Graph, vertices, nodes
+
+tree: undirected graph in which any two vertices are connexcted by exactly 1 path
+
+AKA a graph with no cycles
+
+Balance Trees
+ - left & right subtrees of any nodes differs by 1 or less
+
+Perfect Trees
+ - Every level is full
