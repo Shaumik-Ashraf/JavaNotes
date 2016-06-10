@@ -129,3 +129,17 @@ Balance Trees
 
 Perfect Trees
  - Every level is full
+
+##5/12/16
+
+######Aim: What makes a tree a BST (Binary Search Tree)?
+######DN: Produce your answers to yesterday's Q's: traversals
+
+##5/23/16
+
+######Aim: Heap
+######DN: ZR, SJC, SBI, HoF/S
+
+Heap
+ - a rooted tree
+ - if A is a parent node of B, then A's key is ordered with respect to B's key with same ordering applying across the tree
